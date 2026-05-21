@@ -7,7 +7,7 @@ import { trustItems, whatsappUrl } from "../data/siteData.js";
 import { prefersReducedMotion, revealLines } from "../utils/animation.js";
 
 const heroVideo = {
-  src: "https://videos.pexels.com/video-files/35081930/14861930_1920_1080_60fps.mp4",
+  src: `${import.meta.env.BASE_URL}videos/cedar-heights-hero.mp4`,
   poster:
     "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=88",
 };
