@@ -48,6 +48,18 @@ export default function HeroVideoBackground({
     return () => query.removeEventListener("change", updatePreference);
   }, []);
 
+  useEffect(() => {
+    if (reducedMotion || videoFailed || !media.current || media.current.tagName !== "VIDEO") return;
+
+    media.current.muted = true;
+    media.current.defaultMuted = true;
+
+    const playPromise = media.current.play();
+    if (playPromise) {
+      playPromise.catch(() => setVideoFailed(true));
+    }
+  }, [reducedMotion, videoFailed, src]);
+
   const showPoster = reducedMotion || videoFailed || !src;
 
   return (
@@ -70,11 +82,15 @@ export default function HeroVideoBackground({
             }`}
             poster={poster}
             muted
+            defaultMuted
             autoPlay
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            disablePictureInPicture
+            onLoadedData={() => setVideoReady(true)}
             onCanPlay={() => setVideoReady(true)}
+            onPlaying={() => setVideoReady(true)}
             onError={() => setVideoFailed(true)}
           >
             <source src={src} type="video/mp4" />
