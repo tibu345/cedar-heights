@@ -79,7 +79,7 @@ export default function HeroVideoBackground({
           />
           <video
             ref={media}
-            className="h-full w-full object-cover"
+            className="hero-video-media h-full w-full object-cover"
             poster={poster}
             muted
             defaultMuted

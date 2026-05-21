@@ -58,6 +58,20 @@ textarea {
   overflow: hidden;
 }
 
+.hero-video-media {
+  animation: hero-media-breath 18s ease-in-out infinite alternate;
+}
+
+@keyframes hero-media-breath {
+  from {
+    transform: scale(1.02) translate3d(-0.5%, -0.5%, 0);
+  }
+
+  to {
+    transform: scale(1.08) translate3d(0.5%, 0.5%, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
