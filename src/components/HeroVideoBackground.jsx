@@ -13,7 +13,7 @@ export default function HeroVideoBackground({
   const media = useRef(null);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
+  const [videoStarted, setVideoStarted] = useState(false);
 
   useGSAP(
     () => {
@@ -56,7 +56,9 @@ export default function HeroVideoBackground({
 
     const playPromise = media.current.play();
     if (playPromise) {
-      playPromise.catch(() => setVideoFailed(true));
+      playPromise.catch(() => {
+        // Keep the video element visible; some browsers resolve autoplay after metadata loads.
+      });
     }
   }, [reducedMotion, videoFailed, src]);
 
@@ -72,14 +74,12 @@ export default function HeroVideoBackground({
             src={poster}
             alt=""
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-              videoReady ? "opacity-0" : "opacity-100"
+              videoStarted ? "opacity-0" : "opacity-100"
             }`}
           />
           <video
             ref={media}
-            className={`h-full w-full object-cover transition-opacity duration-700 ${
-              videoReady ? "opacity-100" : "opacity-0"
-            }`}
+            className="h-full w-full object-cover"
             poster={poster}
             muted
             defaultMuted
@@ -88,9 +88,12 @@ export default function HeroVideoBackground({
             playsInline
             preload="auto"
             disablePictureInPicture
-            onLoadedData={() => setVideoReady(true)}
-            onCanPlay={() => setVideoReady(true)}
-            onPlaying={() => setVideoReady(true)}
+            onLoadedData={(event) => event.currentTarget.play().catch(() => {})}
+            onCanPlay={(event) => event.currentTarget.play().catch(() => {})}
+            onPlaying={() => setVideoStarted(true)}
+            onTimeUpdate={(event) => {
+              if (event.currentTarget.currentTime > 0.05) setVideoStarted(true);
+            }}
             onError={() => setVideoFailed(true)}
           >
             <source src={src} type="video/mp4" />
