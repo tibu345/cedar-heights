@@ -2,15 +2,9 @@ import { CalendarDays, Home, MapPin, MessageCircle } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import AnimatedButton from "./AnimatedButton.jsx";
-import HeroVideoBackground from "./HeroVideoBackground.jsx";
+import HeroAnimatedBackground from "./HeroAnimatedBackground.jsx";
 import { trustItems, whatsappUrl } from "../data/siteData.js";
 import { prefersReducedMotion, revealLines } from "../utils/animation.js";
-
-const heroVideo = {
-  src: `${import.meta.env.BASE_URL}videos/cedar-heights-hero.mp4`,
-  poster:
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=88",
-};
 
 export default function Hero() {
   useGSAP(() => {
@@ -30,7 +24,7 @@ export default function Hero() {
 
   return (
     <section id="overview" className="relative isolate min-h-screen overflow-hidden bg-[#191714]">
-      <HeroVideoBackground src={heroVideo.src} poster={heroVideo.poster} overlayClassName="bg-black/24" />
+      <HeroAnimatedBackground />
 
       <div className="section-shell relative z-10 flex min-h-screen flex-col items-center justify-center pb-56 pt-28 text-center sm:pb-48 lg:pb-36">
         <div className="max-w-6xl">
