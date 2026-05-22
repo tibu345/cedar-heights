@@ -45,7 +45,7 @@ textarea {
 }
 
 .section-shell {
-  width: min(1160px, calc(100% - 32px));
+  width: min(1160px, calc(100% - 28px));
   margin-inline: auto;
 }
 
@@ -66,5 +66,11 @@ textarea {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    width: min(1160px, calc(100% - 48px));
   }
 }

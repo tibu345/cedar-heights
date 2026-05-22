@@ -52,20 +52,20 @@ export default function Stats() {
   );
 
   return (
-    <section ref={root} className="reveal-section section-shell py-14 sm:py-20">
+    <section ref={root} className="reveal-section section-shell py-12 sm:py-20">
       <div className="grid border-y border-[#191714]/10 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((item) => (
           <div
             key={item.label}
-            className="stat-card border-b border-[#191714]/10 px-5 py-8 last:border-b-0 sm:odd:border-r lg:border-b-0 lg:border-r lg:last:border-r-0"
+            className="stat-card border-b border-[#191714]/10 px-4 py-6 last:border-b-0 sm:px-5 sm:py-8 sm:odd:border-r lg:border-b-0 lg:border-r lg:last:border-r-0"
           >
-            <div className="font-display text-5xl text-[#191714]">
+            <div className="font-display text-4xl text-[#191714] sm:text-5xl">
               <span className="stat-number" data-value={item.value}>
                 0
               </span>
               {item.suffix}
             </div>
-            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#806328]">
+            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#806328] sm:text-sm sm:tracking-[0.16em]">
               {item.label}
             </p>
           </div>

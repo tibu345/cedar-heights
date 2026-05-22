@@ -16,17 +16,17 @@ export default function Footer() {
   );
 
   return (
-    <footer ref={root} className="bg-[#191714] pb-24 pt-12 text-white lg:pb-12">
+    <footer ref={root} className="bg-[#191714] pb-24 pt-10 text-white sm:pt-12 lg:pb-12">
       <div className="section-shell">
-        <div className="grid gap-10 border-b border-white/10 pb-10 lg:grid-cols-[1fr_1fr] lg:items-end">
+        <div className="grid gap-8 border-b border-white/10 pb-8 sm:gap-10 sm:pb-10 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div className="footer-item">
-            <p className="font-display text-4xl">Cedar Heights</p>
+            <p className="font-display text-3xl sm:text-4xl">Cedar Heights</p>
             <p className="mt-4 max-w-xl leading-7 text-white/65">
               A polished real estate and construction website concept for selling units,
               presenting completed work, and turning visitors into qualified leads.
             </p>
           </div>
-          <nav className="footer-item flex flex-wrap gap-x-6 gap-y-3 lg:justify-end" aria-label="Footer navigation">
+          <nav className="footer-item grid grid-cols-2 gap-x-5 gap-y-3 sm:flex sm:flex-wrap sm:gap-x-6 lg:justify-end" aria-label="Footer navigation">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="text-sm text-white/65 transition hover:text-[#c6a75b]">
                 {item.label}

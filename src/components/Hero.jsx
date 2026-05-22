@@ -23,16 +23,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="overview" className="relative isolate min-h-screen overflow-hidden bg-[#191714]">
+    <section id="overview" className="relative isolate min-h-[100svh] overflow-hidden bg-[#191714]">
       <HeroAnimatedBackground />
 
-      <div className="section-shell relative z-10 flex min-h-screen flex-col items-center justify-center pb-56 pt-28 text-center sm:pb-48 lg:pb-36">
+      <div className="section-shell relative z-10 flex min-h-[100svh] flex-col items-center justify-center pb-28 pt-24 text-center sm:pb-32 sm:pt-28 lg:pb-36">
         <div className="max-w-6xl">
-          <div className="hero-kicker mx-auto mb-7 inline-flex items-center gap-2 border border-white/20 bg-black/18 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#e6d39d] backdrop-blur-md">
+          <div className="hero-kicker mx-auto mb-5 inline-flex max-w-full items-center gap-2 border border-white/20 bg-black/18 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#e6d39d] backdrop-blur-md sm:mb-7 sm:px-4 sm:text-sm sm:tracking-[0.18em]">
             <MapPin size={17} />
             Achrafieh, Beirut
           </div>
-          <h1 className="hero-title font-display mx-auto max-w-5xl text-balance text-4xl leading-[1.02] text-white sm:text-6xl lg:text-7xl xl:text-[6.8rem]">
+          <h1 className="hero-title font-display mx-auto max-w-5xl text-balance text-[2.65rem] leading-[1.02] text-white sm:text-6xl lg:text-7xl xl:text-[6.8rem]">
             <span className="hero-line">
               <span className="hero-title-line inline-block">Cedar Heights,</span>
             </span>
@@ -43,11 +43,11 @@ export default function Hero() {
               <span className="hero-title-line inline-block">for city living</span>
             </span>
           </h1>
-          <p className="hero-copy mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/78">
+          <p className="hero-copy mx-auto mt-5 max-w-3xl text-base leading-7 text-white/78 sm:mt-7 sm:text-lg sm:leading-8">
             A premium project website concept built to help real estate and construction
             companies present their work, capture inquiries, and book site visits.
           </p>
-          <div className="hero-actions mx-auto mt-10 grid max-w-4xl gap-3 sm:mt-12 sm:grid-cols-3">
+          <div className="hero-actions mx-auto mt-7 grid max-w-4xl gap-2.5 sm:mt-12 sm:grid-cols-3 sm:gap-3">
             <AnimatedButton href="#contact" variant="lightOutline" className="hero-action min-w-0 border-white/30 bg-black/18">
               <CalendarDays size={17} /> Plan a Visit
             </AnimatedButton>
@@ -60,14 +60,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute inset-x-4 bottom-24 mx-auto max-w-3xl lg:bottom-10">
+        <div className="mt-10 w-full max-w-3xl lg:absolute lg:inset-x-4 lg:bottom-10 lg:mx-auto lg:mt-0">
           <div className="grid grid-cols-3 gap-2 border-t border-white/15 pt-4">
             {trustItems.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.label}
-                  className="hero-trust flex min-h-16 flex-col justify-center gap-2 border border-white/16 bg-black/18 p-2 text-white backdrop-blur-md sm:p-3"
+                  className="hero-trust flex min-h-14 flex-col justify-center gap-1.5 border border-white/16 bg-black/18 p-2 text-white backdrop-blur-md sm:min-h-16 sm:gap-2 sm:p-3"
                 >
                   <Icon className="text-[#d8bd78]" size={18} />
                   <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/72 sm:text-xs sm:tracking-[0.12em]">

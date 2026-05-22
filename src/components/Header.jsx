@@ -37,7 +37,7 @@ export default function Header() {
           : "border-white/18 bg-black/8"
       }`}
     >
-      <div className="section-shell grid h-20 grid-cols-[1fr_auto_1fr] items-center">
+      <div className="section-shell grid h-16 grid-cols-[1fr_auto_1fr] items-center sm:h-20">
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary left navigation">
           {leftNavItems.map((item) => (
             <a
@@ -53,7 +53,7 @@ export default function Header() {
 
         <a
           href="#overview"
-          className={`font-display text-3xl italic tracking-wide transition-colors hover:text-[#d8bd78] sm:text-4xl ${navText}`}
+          className={`font-display text-2xl italic tracking-wide transition-colors hover:text-[#d8bd78] sm:text-4xl ${navText}`}
         >
           Cedar Heights
         </a>
@@ -73,7 +73,7 @@ export default function Header() {
 
         <button
           type="button"
-          className={`ml-auto inline-flex h-11 w-11 items-center justify-center rounded-sm border lg:hidden ${
+          className={`ml-auto inline-flex h-10 w-10 items-center justify-center rounded-sm border transition-colors sm:h-11 sm:w-11 lg:hidden ${
             scrolled ? "border-[#191714]/15 text-[#191714]" : "border-white/25 text-white"
           }`}
           aria-label="Toggle menu"
@@ -91,9 +91,9 @@ export default function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.32, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-[#191714]/10 bg-[#f7f1e6] lg:hidden"
+            className="overflow-hidden border-t border-[#191714]/10 bg-[#f7f1e6] shadow-xl shadow-black/10 lg:hidden"
           >
-            <nav className="section-shell flex flex-col gap-1 py-5" aria-label="Mobile navigation">
+            <nav className="section-shell flex max-h-[calc(100svh-4rem)] flex-col gap-1 overflow-y-auto py-4" aria-label="Mobile navigation">
               {[...leftNavItems, ...rightNavItems].map((item) => (
                 <a
                   key={`${item.label}-${item.href}`}

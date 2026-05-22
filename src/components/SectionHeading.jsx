@@ -46,26 +46,26 @@ export default function SectionHeading({ eyebrow, title, copy, align = "left", i
   return (
     <div ref={root} className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       <p
-        className={`heading-item text-sm font-semibold uppercase tracking-[0.18em] ${
+        className={`heading-item text-xs font-semibold uppercase tracking-[0.16em] sm:text-sm sm:tracking-[0.18em] ${
           inverted ? "text-[#c6a75b]" : "text-[#806328]"
         }`}
       >
         {eyebrow}
       </p>
       <h2
-        className={`heading-item mt-4 font-display text-4xl leading-tight sm:text-5xl ${
+        className={`heading-item mt-4 font-display text-3xl leading-tight sm:text-5xl ${
           inverted ? "text-white" : "text-[#191714]"
         }`}
       >
         {title}
       </h2>
       {copy && (
-        <p className={`heading-item mt-5 text-lg leading-8 ${inverted ? "text-white/68" : "text-[#5e5549]"}`}>
+        <p className={`heading-item mt-4 text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8 ${inverted ? "text-white/68" : "text-[#5e5549]"}`}>
           {copy}
         </p>
       )}
       <div
-        className={`gold-line mt-7 h-px w-28 bg-[#9a7a35] ${
+        className={`gold-line mt-6 h-px w-24 bg-[#9a7a35] sm:mt-7 sm:w-28 ${
           align === "center" ? "mx-auto" : ""
         }`}
       />

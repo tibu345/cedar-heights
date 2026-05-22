@@ -35,14 +35,14 @@ export default function Gallery() {
   );
 
   return (
-    <section id="gallery" ref={root} className="section-shell py-16 sm:py-24">
+    <section id="gallery" ref={root} className="section-shell py-14 sm:py-24">
       <SectionHeading
         eyebrow="Gallery"
         title="Large architectural visuals make the development easier to believe in."
         copy="For actual client work, these placeholders would be replaced with renders, construction progress photos, renovation before-and-afters, or agency listing imagery."
       />
 
-      <div className="gallery-grid mt-12 grid gap-4 sm:grid-cols-2">
+      <div className="gallery-grid mt-10 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4">
         {galleryImages.map((image, index) => (
           <figure
             key={image.title}
@@ -56,7 +56,7 @@ export default function Gallery() {
               whileHover={{ scale: 1.055 }}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               className={`w-full object-cover ${
-                index === 0 ? "h-full min-h-[520px]" : "h-[300px]"
+                index === 0 ? "h-80 sm:h-full sm:min-h-[520px]" : "h-72 sm:h-[300px]"
               }`}
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-white">
@@ -69,12 +69,12 @@ export default function Gallery() {
         ))}
       </div>
 
-      <div className="portfolio-grid mt-20 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <div className="portfolio-grid mt-14 grid gap-6 sm:mt-20 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div className="portfolio-copy">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#806328]">
             Portfolio section
           </p>
-          <h3 className="mt-4 font-display text-4xl leading-tight text-[#191714]">
+          <h3 className="mt-4 font-display text-3xl leading-tight text-[#191714] sm:text-4xl">
             Before and after storytelling for renovation and construction firms.
           </h3>
           <p className="mt-5 leading-8 text-[#5e5549]">
@@ -95,7 +95,7 @@ export default function Gallery() {
                 alt={`${image.label} construction portfolio`}
                 whileHover={{ scale: 1.045 }}
                 transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                className="h-80 w-full object-cover"
+                className="h-72 w-full object-cover sm:h-80"
               />
               <figcaption className="absolute left-4 top-4 bg-[#f7f1e6] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#806328]">
                 {image.label}

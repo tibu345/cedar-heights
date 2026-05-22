@@ -20,8 +20,8 @@ export default function Location() {
   );
 
   return (
-    <section id="location" ref={root} className="bg-[#efe3d0] py-16 sm:py-24">
-      <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <section id="location" ref={root} className="bg-[#efe3d0] py-14 sm:py-24">
+      <div className="section-shell grid gap-8 sm:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div>
           <SectionHeading
             eyebrow="Location"
@@ -29,16 +29,16 @@ export default function Location() {
             copy="A good project website should make the neighborhood feel practical, not vague. This layout gives buyers the daily-life reasons to book a visit."
           />
 
-          <div className="mt-9 space-y-4">
+          <div className="mt-8 space-y-3 sm:mt-9 sm:space-y-4">
             {locationHighlights.map((item) => (
-              <div key={item} className="location-item flex gap-4 border-b border-[#191714]/10 pb-4">
+              <div key={item} className="location-item flex gap-3 border-b border-[#191714]/10 pb-4 sm:gap-4">
                 <MapPin className="mt-1 shrink-0 text-[#9a7a35]" size={20} />
                 <p className="leading-7 text-[#514a40]">{item}</p>
               </div>
             ))}
           </div>
 
-          <div className="location-item mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="location-item mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
             <AnimatedButton href="#contact" variant="gold">
               Book a Site Visit <Navigation size={17} />
             </AnimatedButton>
@@ -52,7 +52,7 @@ export default function Location() {
         <motion.div
           whileHover={{ y: -4 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="location-map relative min-h-[440px] overflow-hidden rounded-sm border border-[#191714]/10 bg-[#1d1a16] p-5 text-white"
+          className="location-map relative min-h-[360px] overflow-hidden rounded-sm border border-[#191714]/10 bg-[#1d1a16] p-4 text-white sm:min-h-[440px] sm:p-5"
         >
           <div className="absolute inset-0 opacity-65">
             <motion.img
@@ -64,13 +64,13 @@ export default function Location() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/5" />
-          <div className="relative flex h-full min-h-[400px] flex-col justify-end">
-            <div className="max-w-sm border border-white/15 bg-black/25 p-5 backdrop-blur-md">
+          <div className="relative flex h-full min-h-[330px] flex-col justify-end sm:min-h-[400px]">
+            <div className="max-w-sm border border-white/15 bg-black/25 p-4 backdrop-blur-md sm:p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#c6a75b]">
                 Map preview
               </p>
-              <h3 className="mt-3 font-display text-3xl">Cedar Heights, Achrafieh</h3>
-              <p className="mt-4 leading-7 text-white/75">
+              <h3 className="mt-3 font-display text-2xl sm:text-3xl">Cedar Heights, Achrafieh</h3>
+              <p className="mt-3 leading-7 text-white/75 sm:mt-4">
                 Replace this visual with a live map embed, site pin, and nearby landmarks for each client pitch.
               </p>
             </div>

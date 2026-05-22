@@ -25,7 +25,7 @@ export default function AnimatedButton({
       whileHover={{ y: -2, boxShadow: "0 16px 34px rgba(25, 23, 20, 0.14)" }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-      className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] transition-colors ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.11em] transition-colors sm:px-5 sm:text-sm sm:tracking-[0.14em] ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

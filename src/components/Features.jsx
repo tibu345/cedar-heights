@@ -19,9 +19,9 @@ export default function Features() {
   );
 
   return (
-    <section id="features" ref={root} className="bg-[#1d1a16] py-16 text-white sm:py-24">
+    <section id="features" ref={root} className="bg-[#1d1a16] py-14 text-white sm:py-24">
       <div className="section-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
           <SectionHeading
             eyebrow="Features and sales tools"
             title="A project presentation that feels premium and works commercially."
@@ -29,7 +29,7 @@ export default function Features() {
             inverted
           />
 
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3">
             {services.map((service) => {
               const Icon = service.icon;
               return (
@@ -40,7 +40,7 @@ export default function Features() {
                   className="service-card border border-white/10 bg-white/[0.04] p-4"
                 >
                   <Icon className="text-[#c6a75b]" size={20} />
-                  <p className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-white/75">
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/75 sm:text-sm sm:tracking-[0.14em]">
                     {service.label}
                   </p>
                 </motion.div>
@@ -49,7 +49,7 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="features-grid mt-12 grid gap-px overflow-hidden bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="features-grid mt-10 grid gap-px overflow-hidden bg-white/10 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -57,10 +57,10 @@ export default function Features() {
                 key={feature.title}
                 whileHover={{ y: -5, backgroundColor: "#242018" }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="feature-card bg-[#1d1a16] p-6 sm:p-8"
+                className="feature-card bg-[#1d1a16] p-5 sm:p-8"
               >
                 <Icon className="text-[#c6a75b]" size={26} />
-                <h3 className="mt-8 font-display text-2xl text-white">{feature.title}</h3>
+                <h3 className="mt-6 font-display text-xl text-white sm:mt-8 sm:text-2xl">{feature.title}</h3>
               </motion.div>
             );
           })}

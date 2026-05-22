@@ -8,7 +8,7 @@ import { whatsappUrl } from "../data/siteData.js";
 import { prefersReducedMotion, revealOnScroll } from "../utils/animation.js";
 
 const inputClass =
-  "w-full rounded-sm border border-[#191714]/12 bg-white/70 px-4 py-3 text-[#191714] outline-none transition focus:border-[#9a7a35] focus:bg-white";
+  "w-full rounded-sm border border-[#191714]/12 bg-white/70 px-4 py-3 text-base text-[#191714] outline-none transition focus:border-[#9a7a35] focus:bg-white";
 
 export default function LeadForm() {
   const root = useRef(null);
@@ -30,7 +30,7 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="contact" ref={root} className="section-shell py-16 pb-28 sm:py-24 lg:pb-24">
+    <section id="contact" ref={root} className="section-shell py-14 pb-28 sm:py-24 lg:pb-24">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="contact-aside">
           <SectionHeading
@@ -42,9 +42,9 @@ export default function LeadForm() {
           <motion.div
             whileHover={{ y: -5, boxShadow: "0 22px 50px rgba(25, 23, 20, 0.1)" }}
             transition={{ duration: 0.32, ease: "easeOut" }}
-            className="mt-10 border border-[#191714]/10 bg-[#fffaf1] p-6"
+            className="mt-8 border border-[#191714]/10 bg-[#fffaf1] p-5 sm:mt-10 sm:p-6"
           >
-            <p className="font-display text-3xl text-[#191714]">WhatsApp-ready CTA</p>
+            <p className="font-display text-2xl text-[#191714] sm:text-3xl">WhatsApp-ready CTA</p>
             <p className="mt-4 leading-7 text-[#5e5549]">
               Lebanese property buyers often prefer quick messaging. This site keeps WhatsApp visible without making the design feel cheap.
             </p>
@@ -60,8 +60,8 @@ export default function LeadForm() {
           </motion.div>
         </div>
 
-        <form onSubmit={handleSubmit} className="lead-form border border-[#191714]/10 bg-[#fffaf1] p-5 shadow-xl shadow-black/5 sm:p-8">
-          <div className="grid gap-5 sm:grid-cols-2">
+        <form onSubmit={handleSubmit} className="lead-form border border-[#191714]/10 bg-[#fffaf1] p-4 shadow-xl shadow-black/5 sm:p-8">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#514a40]">Full name</span>
               <input className={inputClass} name="name" type="text" autoComplete="name" required />

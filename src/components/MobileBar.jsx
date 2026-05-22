@@ -26,7 +26,7 @@ const mobileActions = [
 
 export default function MobileBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#191714]/10 bg-[#f7f1e6]/95 p-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-2xl shadow-black/20 backdrop-blur-xl lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#191714]/10 bg-[#f7f1e6]/95 p-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom))] shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-2 sm:pb-[calc(0.5rem+env(safe-area-inset-bottom))] lg:hidden">
       <div className="grid grid-cols-3 gap-2">
         {mobileActions.map((action) => {
           const Icon = action.icon;
@@ -40,7 +40,7 @@ export default function MobileBar() {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className={`inline-flex h-12 items-center justify-center gap-1.5 rounded-sm px-2 text-[11px] font-semibold uppercase tracking-[0.1em] ${action.className}`}
+              className={`inline-flex h-11 items-center justify-center gap-1 rounded-sm px-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] sm:h-12 sm:gap-1.5 sm:px-2 sm:text-[11px] sm:tracking-[0.1em] ${action.className}`}
             >
               <Icon size={16} />
               {action.label}
