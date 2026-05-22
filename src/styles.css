@@ -58,6 +58,19 @@ textarea {
   overflow: hidden;
 }
 
+.hero-cover-title {
+  font-size: clamp(2.35rem, 12vw, 6.8rem);
+  line-height: 1.02;
+}
+
+.hero-cover-copy {
+  text-wrap: pretty;
+}
+
+.hero-cover-actions {
+  width: min(100%, 56rem);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -72,5 +85,90 @@ textarea {
 @media (min-width: 640px) {
   .section-shell {
     width: min(1160px, calc(100% - 48px));
+  }
+}
+
+@media (max-width: 374px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .section-shell {
+    width: min(1160px, calc(100% - 20px));
+  }
+
+  .hero-cover-title {
+    font-size: clamp(2.05rem, 11.2vw, 2.65rem);
+    line-height: 1.04;
+  }
+
+  .hero-cover-copy {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .hero-cover-actions a {
+    min-height: 2.55rem;
+    letter-spacing: 0.06em;
+  }
+
+  .mobile-action {
+    font-size: 9px;
+    letter-spacing: 0.045em;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 430px) {
+  .hero-cover-title {
+    font-size: clamp(2.45rem, 11.5vw, 3.15rem);
+  }
+}
+
+@media (max-height: 720px) and (max-width: 767px) {
+  .hero-cover-layout {
+    justify-content: flex-start;
+    padding-top: 5.5rem;
+  }
+
+  .hero-cover-copy {
+    margin-top: 0.9rem;
+  }
+
+  .hero-cover-actions {
+    margin-top: 1.1rem;
+  }
+
+  .hero-trust-wrap {
+    margin-top: 1.1rem;
+  }
+
+  .hero-trust-wrap .hero-trust {
+    min-height: 3rem;
+  }
+}
+
+@media (max-height: 630px) and (max-width: 767px) {
+  .hero-cover-copy {
+    display: none;
+  }
+
+  .hero-trust-wrap {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  .hero-cover-layout {
+    min-height: 34rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-cover-title {
+    font-size: clamp(2.25rem, 8vw, 4rem);
+  }
+
+  .hero-cover-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

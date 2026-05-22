@@ -36,13 +36,13 @@ export default function Hero() {
         overlayClassName="bg-black/28"
       />
 
-      <div className="section-shell relative z-10 flex min-h-[100svh] flex-col items-center justify-center pb-28 pt-24 text-center sm:pb-32 sm:pt-28 lg:pb-36">
+      <div className="section-shell hero-cover-layout relative z-10 flex min-h-[100svh] flex-col items-center justify-center pb-28 pt-24 text-center sm:pb-32 sm:pt-28 lg:pb-36">
         <div className="max-w-6xl">
           <div className="hero-kicker mx-auto mb-5 inline-flex max-w-full items-center gap-2 border border-white/20 bg-black/18 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#e6d39d] backdrop-blur-md sm:mb-7 sm:px-4 sm:text-sm sm:tracking-[0.18em]">
             <MapPin size={17} />
             Achrafieh, Beirut
           </div>
-          <h1 className="hero-title font-display mx-auto max-w-5xl text-balance text-[2.65rem] leading-[1.02] text-white sm:text-6xl lg:text-7xl xl:text-[6.8rem]">
+          <h1 className="hero-title hero-cover-title font-display mx-auto max-w-5xl text-balance text-white">
             <span className="hero-line">
               <span className="hero-title-line inline-block">Cedar Heights,</span>
             </span>
@@ -53,11 +53,11 @@ export default function Hero() {
               <span className="hero-title-line inline-block">for city living</span>
             </span>
           </h1>
-          <p className="hero-copy mx-auto mt-5 max-w-3xl text-base leading-7 text-white/78 sm:mt-7 sm:text-lg sm:leading-8">
+          <p className="hero-copy hero-cover-copy mx-auto mt-5 max-w-3xl text-base leading-7 text-white/78 sm:mt-7 sm:text-lg sm:leading-8">
             A premium project website concept built to help real estate and construction
             companies present their work, capture inquiries, and book site visits.
           </p>
-          <div className="hero-actions mx-auto mt-7 grid max-w-4xl gap-2.5 sm:mt-12 sm:grid-cols-3 sm:gap-3">
+          <div className="hero-actions hero-cover-actions mx-auto mt-7 grid max-w-4xl gap-2.5 sm:mt-12 sm:grid-cols-3 sm:gap-3">
             <AnimatedButton href="#contact" variant="lightOutline" className="hero-action min-w-0 border-white/30 bg-black/18">
               <CalendarDays size={17} /> Plan a Visit
             </AnimatedButton>
@@ -70,7 +70,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 w-full max-w-3xl lg:absolute lg:inset-x-4 lg:bottom-10 lg:mx-auto lg:mt-0">
+        <div className="hero-trust-wrap mt-10 w-full max-w-3xl lg:absolute lg:inset-x-4 lg:bottom-10 lg:mx-auto lg:mt-0">
           <div className="grid grid-cols-3 gap-2 border-t border-white/15 pt-4">
             {trustItems.map((item) => {
               const Icon = item.icon;

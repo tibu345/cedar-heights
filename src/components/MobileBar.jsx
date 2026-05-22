@@ -40,7 +40,7 @@ export default function MobileBar() {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className={`inline-flex h-11 items-center justify-center gap-1 rounded-sm px-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] sm:h-12 sm:gap-1.5 sm:px-2 sm:text-[11px] sm:tracking-[0.1em] ${action.className}`}
+              className={`mobile-action inline-flex h-11 items-center justify-center gap-1 rounded-sm px-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] sm:h-12 sm:gap-1.5 sm:px-2 sm:text-[11px] sm:tracking-[0.1em] ${action.className}`}
             >
               <Icon size={16} />
               {action.label}
